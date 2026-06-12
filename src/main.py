@@ -64,4 +64,4 @@ def make_ros2_docker_run_command(
     container_name,
     image_name,
 ):
-    return f"docker run -it --name {container_name} -net host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix {image_name}"
+    return f"docker run -dit --name {container_name} -net host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix {image_name}"
